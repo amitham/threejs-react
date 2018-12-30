@@ -1,26 +1,26 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+
+import HOC from './HOC/Hoc';
+import Navigation from './Components/Navigation/Navigation';
+import Header from './Components/Header/Header';
+import Example01 from './Components/Example01/Example01';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <HOC>
+        <div className="container-fluid">
+          <div className="row">
+
+            <Header />
+            <Navigation />
+            <Example01 />
+            
+          </div>
+        </div>
+
+      </HOC >
     );
   }
 }
